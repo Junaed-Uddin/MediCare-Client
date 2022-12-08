@@ -16,9 +16,7 @@ const Navbar = () => {
     const menuItem = <React.Fragment>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/appointment'>Appointment</Link></li>
-        <li><Link to='/reviews'>Reviews</Link></li>
         <li><Link to='/dashboard/myAppointment'>Dashboard</Link></li>
-        <li><Link to='/about'>About</Link></li>
         <li><Link to='/contact'>Contact Us</Link></li>
         {
             user?.uid ?
@@ -45,7 +43,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className='flex items-center'>
-                    <Link className="btn btn-ghost normal-case text-4xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500">MediCare</Link>
+                    <Link to='/' className="btn btn-ghost normal-case text-4xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500">MediCare</Link>
                 </div>
             </div>
             <div className="list-none gap-4 text-base font-semibold hidden lg:flex lg:items-center">

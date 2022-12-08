@@ -12,7 +12,7 @@ const AddDoctor = () => {
     const { data: specialties = [], isLoading } = useQuery({
         queryKey: ['appointmentSpecialty'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/appointmentSpecialty');
+            const res = await fetch('https://doctor-portal-server-topaz-ten.vercel.app/appointmentSpecialty');
             const data = await res.json();
             return data.data;
         }
@@ -37,7 +37,7 @@ const AddDoctor = () => {
                         image: imageData.data.url
                     }
 
-                    fetch('http://localhost:5000/doctors', {
+                    fetch('https://doctor-portal-server-topaz-ten.vercel.app/doctors', {
                         method: 'POST',
                         headers: {
                             "content-type": "application/json",

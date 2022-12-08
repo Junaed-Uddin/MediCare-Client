@@ -13,7 +13,7 @@ const CheckoutForm = ({ booking }) => {
     const { price, personName, email, _id } = booking.data;
 
     useEffect(() => {
-        fetch("http://localhost:5000/create-payment-intent", {
+        fetch("https://doctor-portal-server-topaz-ten.vercel.app/create-payment-intent", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -82,7 +82,7 @@ const CheckoutForm = ({ booking }) => {
                 bookingId: _id
             }
 
-            fetch('http://localhost:5000/payments', {
+            fetch('https://doctor-portal-server-topaz-ten.vercel.app/payments', {
                 method: 'POST',
                 headers: {
                     "content-type": "application/json",

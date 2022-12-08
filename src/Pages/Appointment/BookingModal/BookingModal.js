@@ -22,7 +22,7 @@ const BookingModal = ({ selectDate, treatment, setTreatment, refetch }) => {
             price: price
         }
 
-        fetch('http://localhost:5000/booking', {
+        fetch('https://doctor-portal-server-topaz-ten.vercel.app/booking', {
             method: 'POST',
             headers: {
                 "content-type": "application/json"

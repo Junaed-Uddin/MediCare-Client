@@ -45,7 +45,7 @@ const Register = () => {
     const savedUser = (name, email) => {
         const userInfo = { name, email };
 
-        fetch('http://localhost:5000/users  ', {
+        fetch('https://doctor-portal-server-topaz-ten.vercel.app/users  ', {
             method: "POST",
             headers: {
                 "content-type": "application/json"

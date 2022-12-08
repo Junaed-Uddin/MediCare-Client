@@ -33,7 +33,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'appointment',
-                element: <Appointment></Appointment>
+                element: <PrivateRoute><Appointment></Appointment></PrivateRoute>
             },
             {
                 path: 'contact',
@@ -76,7 +76,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/dashboard/booking/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/booking/${params.id}`),
+                loader: ({ params }) => fetch(`https://doctor-portal-server-topaz-ten.vercel.app/booking/${params.id}`),
                 element: <Payment></Payment>
             }
         ]

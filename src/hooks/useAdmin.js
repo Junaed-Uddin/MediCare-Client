@@ -7,7 +7,7 @@ const useAdmin = email => {
 
     useEffect(() => {
         if (email) {
-            fetch(`http://localhost:5000/users/admin/${email}`, {
+            fetch(`https://doctor-portal-server-topaz-ten.vercel.app/users/admin/${email}`, {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem("accessToken")}`
                 }

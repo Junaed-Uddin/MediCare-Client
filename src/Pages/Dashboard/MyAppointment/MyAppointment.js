@@ -8,7 +8,7 @@ const MyAppointment = () => {
     const { data: bookedUsers = [] } = useQuery({
         queryKey: ['booking', user?.email],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/booking?email=${user?.email}`, {
+            const res = await fetch(`https://doctor-portal-server-topaz-ten.vercel.app/booking?email=${user?.email}`, {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`
                 }
